@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Respostas dos grupos</title>
+<meta name="description" content="Consolida os arquivos de respostas da atividade Detetives do site.">
+<link rel="stylesheet" href="assets/estilo.css">
+<link rel="stylesheet" href="assets/logos.css">
+</head>
+<body>
+<header class="topo">
+  <div class="marca">
+    <span class="logo lg-logo-projeto-icone" role="img" aria-label="Logo do projeto"></span>
+    <div><div class="kicker">Detetives do site · área do professor</div><h1>Respostas dos grupos</h1></div>
+  </div>
+  <p>Carregue os arquivos <code>respostas_….json</code> enviados pelos grupos. Os arquivos são lidos apenas neste navegador: nada é enviado para a internet.</p>
+</header>
+<main>
+  <section class="cartao">
+    <h2>1. Carregar arquivos</h2>
+    <div class="botoes">
+      <label class="botao" for="arquivos" style="cursor:pointer">Escolher arquivos de respostas</label>
+      <input type="file" id="arquivos" accept=".json,application/json" multiple class="oculta">
+      <button type="button" class="sec" id="btnCsv">Baixar planilha (CSV)</button>
+      <button type="button" class="sec" id="btnImprimir">Imprimir</button>
+      <button type="button" class="perigo" id="btnLimpar">Esvaziar lista</button>
+    </div>
+    <p class="status" id="msg" role="status"></p>
+    <div id="grupos"></div>
+  </section>
+  <section class="cartao">
+    <h2>2. Respostas por questão</h2>
+    <p class="aviso">Útil para a socialização: todas as respostas de uma questão lado a lado.</p>
+    <label for="filtro" class="enun" style="margin-top:10px">Mostrar a missão</label>
+    <select id="filtro"><option value="">Todas as missões</option></select>
+    <div id="porQuestao"></div>
+  </section>
+</main>
+<footer>
+  <div class="in">
+    <p>O presente trabalho foi realizado com apoio da Fundação de Amparo à Pesquisa e Inovação do Espírito Santo (Fapes) e da Secretaria de Estado da Educação - Sedu, por meio do Edital nº 17/2025.</p>
+  </div>
+</footer>
+<script src="assets/questoes.js"></script>
+<script src="assets/professor.js"></script>
+</body>
+</html>

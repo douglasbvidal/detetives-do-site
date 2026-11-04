@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Detetives do site</title>
+<meta name="description" content="Atividade da eletiva Detetives dos Dados: estudo da organização do site A Matemática dos Dados, em preparação para a Mostra.">
+<link rel="stylesheet" href="assets/estilo.css">
+<link rel="stylesheet" href="assets/logos.css">
+</head>
+<body>
+<header class="topo">
+  <div class="marca">
+    <span class="logo lg-logo-projeto-icone" role="img" aria-label="Logo do projeto A Matemática dos Dados"></span>
+    <div>
+      <div class="kicker">Eletiva Detetives dos Dados · preparação para a Mostra</div>
+      <h1>Detetives do site</h1>
+    </div>
+  </div>
+  <p>Vamos estudar o site <b>A Matemática dos Dados</b> por dentro: como ele está organizado, que tipos de informação ele tem e como encontramos cada coisa. Não é para decorar preços: é para vocês guiarem qualquer visitante.</p>
+</header>
+
+<div class="barra">
+  <div class="in">
+    <div class="progresso" aria-live="polite">
+      <div class="trilho"><div class="cheio" id="cheio"></div></div>
+      <small id="txtProgresso">0 de 0 campos respondidos</small>
+    </div>
+    <span class="status" id="status">Respostas salvas neste aparelho</span>
+    <a class="botao sec" href="https://douglasbvidal.github.io/matematica-dos-dados/" target="_blank" rel="noopener">Abrir o site da pesquisa ↗</a>
+  </div>
+</div>
+
+<main id="form">
+  <section class="cartao">
+    <h2>Identificação do grupo</h2>
+    <div class="grade">
+      <div class="q"><label for="g_nome">Nome do grupo</label><input type="text" id="g_nome" data-campo="grupo.nome" autocomplete="off"></div>
+      <div class="q"><label for="g_turma">Turma</label><input type="text" id="g_turma" data-campo="grupo.turma" autocomplete="off"></div>
+    </div>
+    <div class="q"><label for="g_integrantes">Integrantes (um nome por linha)</label><textarea id="g_integrantes" data-campo="grupo.integrantes" rows="4"></textarea></div>
+    <div class="grade">
+      <div class="q"><label for="g_produto">Produto sorteado (Missão 3)</label><input type="text" id="g_produto" data-campo="grupo.produto" autocomplete="off"></div>
+      <div class="q"><label for="g_missao">Missão indicada pelo professor</label>
+        <select id="g_missao" data-campo="grupo.missao">
+          <option value="">Escolha…</option>
+          <option value="m4">Missão 4 · Os mercados</option>
+          <option value="m5">Missão 5 · Embalagens e o simulador</option>
+          <option value="m6">Missão 6 · A pesquisa e as fontes</option>
+          <option value="todas">Todas</option>
+        </select></div>
+    </div>
+    <p class="aviso" style="margin-top:14px"><b>Como trabalhar.</b> Deixem o site da pesquisa aberto em outra aba. Sempre que a pergunta pedir, anotem o <b>caminho de cliques</b>, por exemplo: Início → Produtos → Arroz → aba Estudo e referências. Todos os grupos fazem as Missões 1, 2, 3 e 7 e a missão indicada pelo professor.</p>
+    <p class="aviso"><b>Onde ficam as respostas?</b> Elas são salvas sozinhas <b>neste aparelho e neste navegador</b>, mesmo se a página for fechada. Para entregar ao professor, usem o botão <b>Baixar arquivo de respostas</b> no final e enviem o arquivo pelo canal combinado com a turma.</p>
+  </section>
+
+  <div id="missoes"></div>
+
+  <section class="cartao" id="acoes">
+    <h2>Entregar</h2>
+    <p>Confiram o progresso no topo. Depois baixem o arquivo e enviem ao professor. Se usarem outro aparelho, as respostas não aparecem lá: continuem sempre no mesmo.</p>
+    <div class="botoes">
+      <button type="button" id="btnBaixar">Baixar arquivo de respostas</button>
+      <button type="button" class="sec" id="btnCopiar">Copiar respostas em texto</button>
+      <button type="button" class="sec" id="btnImprimir">Imprimir ou salvar em PDF</button>
+      <label class="botao sec" for="arqAbrir" style="cursor:pointer">Abrir um arquivo salvo</label>
+      <input type="file" id="arqAbrir" accept=".json,application/json" class="oculta">
+      <button type="button" class="perigo" id="btnLimpar">Apagar respostas deste aparelho</button>
+    </div>
+    <p class="status" id="msgAcoes" role="status"></p>
+  </section>
+</main>
+
+<main id="resumo" class="oculta" aria-hidden="true"></main>
+
+<footer>
+  <div class="in">
+    <p><b>A Matemática dos Dados · Observatório de Dados Locais</b> — Eletiva Detetives dos Dados, CEEFMTI Professor Elpídio Campos de Oliveira. Professores Douglas Bitencourt Vidal e Rafael Ramos Pereira da Silva.</p>
+    <p>O presente trabalho foi realizado com apoio da Fundação de Amparo à Pesquisa e Inovação do Espírito Santo (Fapes) e da Secretaria de Estado da Educação - Sedu, por meio do Edital nº 17/2025.</p>
+    <div class="logos">
+      <span class="claro"><span class="logo lg-logo-escola" role="img" aria-label="Selo do CEEFMTI Professor Elpídio Campos de Oliveira"></span></span>
+      <span class="claro"><span class="logo lg-fapes" role="img" aria-label="Fapes"></span></span>
+      <span class="logo lg-governo" role="img" aria-label="Governo do Estado do Espírito Santo"></span>
+    </div>
+  </div>
+</footer>
+<script src="assets/questoes.js"></script>
+<script src="assets/aluno.js"></script>
+</body>
+</html>
